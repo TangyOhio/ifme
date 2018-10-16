@@ -1,5 +1,5 @@
 // @flow
-import React, { Fragment } from 'react';
+import React from 'react';
 import renderHTML from 'react-render-html';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -101,7 +101,7 @@ export class Modal extends React.Component<Props, State> {
     const { element, elementId } = this.props;
     const { open } = this.state;
     return (
-      <Fragment>
+      <div>
         {element ? (
           <div
             id={elementId || null}
@@ -115,7 +115,7 @@ export class Modal extends React.Component<Props, State> {
           </div>
         ) : null}
         {open ? this.displayModalBox() : null}
-      </Fragment>
+      </div>
     );
   }
 }
